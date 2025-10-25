@@ -69,7 +69,7 @@ export function Footer() {
           <div className="space-y-3">
             <h4 className="font-semibold">Nhận Tin</h4>
             <p className="text-sm text-muted-foreground">
-              Giảm 10% cho đơn hàng đầu tiên
+              Giảm 10% đơn hàng đầu tiên
             </p>
             <div className="flex gap-2">
               <Input

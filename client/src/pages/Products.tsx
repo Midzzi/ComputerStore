@@ -22,8 +22,8 @@ const mockProducts = [
   {
     id: "1",
     name: "PC Gaming RTX 4090",
-    price: 2499.99,
-    salePrice: 2299.99,
+    price: 62499750, // ~2500 USD
+    salePrice: 57499750, // ~2300 USD
     image: gamingPc,
     rating: 4.8,
     reviewCount: 156,
@@ -34,7 +34,7 @@ const mockProducts = [
   {
     id: "2",
     name: "Laptop Cao Cấp Doanh Nghiệp",
-    price: 1899.99,
+    price: 47499750, // ~1900 USD
     image: laptop,
     rating: 4.6,
     reviewCount: 89,
@@ -45,8 +45,8 @@ const mockProducts = [
   {
     id: "3",
     name: "Bộ Linh Kiện Lắp Ráp",
-    price: 1299.99,
-    salePrice: 1199.99,
+    price: 32499750, // ~1300 USD
+    salePrice: 29999750, // ~1200 USD
     image: components,
     rating: 4.9,
     reviewCount: 234,
@@ -57,7 +57,7 @@ const mockProducts = [
   {
     id: "4",
     name: "Máy Trạm Chuyên Nghiệp",
-    price: 3299.99,
+    price: 82499750, // ~3300 USD
     image: gamingPc,
     rating: 4.7,
     reviewCount: 67,
@@ -68,7 +68,7 @@ const mockProducts = [
   {
     id: "5",
     name: "Laptop Gaming Giá Rẻ",
-    price: 899.99,
+    price: 22499750, // ~900 USD
     image: laptop,
     rating: 4.3,
     reviewCount: 145,
@@ -79,7 +79,7 @@ const mockProducts = [
   {
     id: "6",
     name: "Combo Linh Kiện Cao Cấp",
-    price: 1799.99,
+    price: 44999750, // ~1800 USD
     image: components,
     rating: 4.8,
     reviewCount: 98,
@@ -92,7 +92,7 @@ const mockProducts = [
 export default function Products() {
   const [cartOpen, setCartOpen] = useState(false);
   const [cartItems, setCartItems] = useState<any[]>([]);
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 5000]);
+  const [priceRange, setPriceRange] = useState<[number, number]>([0, 125000000]); // 0 - ~5000 USD in VND
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
   const [sortBy, setSortBy] = useState("best-match");
 
@@ -182,13 +182,13 @@ export default function Products() {
             <aside className="lg:w-64 flex-shrink-0">
               <FilterSidebar
                 priceRange={priceRange}
-                maxPrice={5000}
+                maxPrice={125000000}
                 selectedBrands={selectedBrands}
                 brands={brands}
                 onPriceChange={setPriceRange}
                 onBrandChange={setSelectedBrands}
                 onClearFilters={() => {
-                  setPriceRange([0, 5000]);
+                  setPriceRange([0, 125000000]);
                   setSelectedBrands([]);
                 }}
               />
@@ -203,7 +203,7 @@ export default function Products() {
                   </p>
                   <Button
                     onClick={() => {
-                      setPriceRange([0, 5000]);
+                      setPriceRange([0, 125000000]);
                       setSelectedBrands([]);
                     }}
                   >

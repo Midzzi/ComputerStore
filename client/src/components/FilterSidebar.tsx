@@ -4,6 +4,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
+import { formatVND } from "@/lib/currency";
 
 interface FilterSidebarProps {
   priceRange: [number, number];
@@ -55,14 +56,14 @@ export function FilterSidebar({
           <Slider
             value={priceRange}
             max={maxPrice}
-            step={100}
+            step={1000000}
             onValueChange={(value) => onPriceChange?.(value as [number, number])}
             className="w-full"
             data-testid="slider-price"
           />
           <div className="flex items-center justify-between text-sm">
-            <span className="font-mono" data-testid="text-min-price">${priceRange[0]}</span>
-            <span className="font-mono" data-testid="text-max-price">${priceRange[1]}</span>
+            <span className="font-mono" data-testid="text-min-price">{formatVND(priceRange[0])}</span>
+            <span className="font-mono" data-testid="text-max-price">{formatVND(priceRange[1])}</span>
           </div>
         </div>
       </div>

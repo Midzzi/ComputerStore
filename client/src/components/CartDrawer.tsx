@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { X, Minus, Plus, Trash2, ShoppingBag } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { formatVND } from "@/lib/currency";
 
 interface CartItem {
   id: string;
@@ -75,7 +76,7 @@ export function CartDrawer({
                         {item.name}
                       </h3>
                       <p className="text-lg font-bold font-mono" data-testid={`text-cart-price-${item.id}`}>
-                        ${item.price.toFixed(2)}
+                        {formatVND(item.price)}
                       </p>
                       <div className="flex items-center justify-between gap-2">
                         <div className="flex items-center gap-2">
@@ -124,7 +125,7 @@ export function CartDrawer({
             <div className="flex items-center justify-between text-lg">
               <span className="font-semibold">Tạm Tính:</span>
               <span className="font-bold font-mono" data-testid="text-subtotal">
-                ${subtotal.toFixed(2)}
+                {formatVND(subtotal)}
               </span>
             </div>
             <Button className="w-full" size="lg" onClick={onCheckout} data-testid="button-checkout">

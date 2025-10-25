@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Star, ShoppingCart } from "lucide-react";
+import { formatVND } from "@/lib/currency";
 
 interface ProductCardProps {
   id: string;
@@ -84,11 +85,11 @@ export function ProductCard({
         <div className="space-y-2">
           <div className="flex items-baseline gap-2">
             <span className="text-2xl font-bold font-mono" data-testid={`text-price-${id}`}>
-              ${displayPrice.toFixed(2)}
+              {formatVND(displayPrice)}
             </span>
             {isOnSale && (
               <span className="text-sm text-muted-foreground line-through" data-testid={`text-original-price-${id}`}>
-                ${price.toFixed(2)}
+                {formatVND(price)}
               </span>
             )}
           </div>

@@ -18,8 +18,8 @@ const mockProducts = [
   {
     id: "1",
     name: "PC Gaming RTX 4090",
-    price: 2499.99,
-    salePrice: 2299.99,
+    price: 62499750, // ~2500 USD
+    salePrice: 57499750, // ~2300 USD
     image: gamingPc,
     rating: 4.8,
     reviewCount: 156,
@@ -29,7 +29,7 @@ const mockProducts = [
   {
     id: "2",
     name: "Laptop Cao Cấp Doanh Nghiệp",
-    price: 1899.99,
+    price: 47499750, // ~1900 USD
     image: laptop,
     rating: 4.6,
     reviewCount: 89,
@@ -39,8 +39,8 @@ const mockProducts = [
   {
     id: "3",
     name: "Bộ Linh Kiện Lắp Ráp",
-    price: 1299.99,
-    salePrice: 1199.99,
+    price: 32499750, // ~1300 USD
+    salePrice: 29999750, // ~1200 USD
     image: components,
     rating: 4.9,
     reviewCount: 234,
@@ -50,7 +50,7 @@ const mockProducts = [
   {
     id: "4",
     name: "Máy Trạm Chuyên Nghiệp",
-    price: 3299.99,
+    price: 82499750, // ~3300 USD
     image: gamingPc,
     rating: 4.7,
     reviewCount: 67,
@@ -180,7 +180,7 @@ export default function Home() {
                 </div>
                 <h3 className="font-bold text-xl">Miễn Phí Vận Chuyển</h3>
                 <p className="text-muted-foreground">
-                  Miễn phí vận chuyển cho đơn hàng trên $500
+                  Miễn phí vận chuyển cho đơn hàng trên 12.500.000₫
                 </p>
               </Card>
               <Card className="p-6 text-center space-y-4">
