@@ -39,7 +39,7 @@ export function Header({ cartItemCount = 0, onCartClick, onMenuClick, onSearch }
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input
                 type="search"
-                placeholder="Search products..."
+                placeholder="Tìm kiếm sản phẩm..."
                 className="pl-10"
                 onChange={(e) => onSearch?.(e.target.value)}
                 data-testid="input-search"
@@ -75,7 +75,7 @@ export function Header({ cartItemCount = 0, onCartClick, onMenuClick, onSearch }
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
               type="search"
-              placeholder="Search products..."
+              placeholder="Tìm kiếm sản phẩm..."
               className="pl-10"
               onChange={(e) => onSearch?.(e.target.value)}
               data-testid="input-search-mobile"
@@ -89,22 +89,22 @@ export function Header({ cartItemCount = 0, onCartClick, onMenuClick, onSearch }
           <nav className="flex items-center gap-6 h-12 text-sm">
             <Link href="/category/desktop">
               <span className="hover-elevate px-3 py-2 rounded-md cursor-pointer" data-testid="link-desktop">
-                Desktop Computers
+                Máy Tính Để Bàn
               </span>
             </Link>
             <Link href="/category/laptop">
               <span className="hover-elevate px-3 py-2 rounded-md cursor-pointer" data-testid="link-laptop">
-                Laptops
+                Laptop
               </span>
             </Link>
             <Link href="/category/components">
               <span className="hover-elevate px-3 py-2 rounded-md cursor-pointer" data-testid="link-components">
-                Components
+                Linh Kiện
               </span>
             </Link>
             <Link href="/category/peripherals">
               <span className="hover-elevate px-3 py-2 rounded-md cursor-pointer" data-testid="link-peripherals">
-                Peripherals
+                Thiết Bị Ngoại Vi
               </span>
             </Link>
           </nav>

@@ -21,7 +21,7 @@ import components from "@assets/generated_images/Computer_components_collection_
 const mockProducts = [
   {
     id: "1",
-    name: "Gaming Desktop PC RTX 4090",
+    name: "PC Gaming RTX 4090",
     price: 2499.99,
     salePrice: 2299.99,
     image: gamingPc,
@@ -33,7 +33,7 @@ const mockProducts = [
   },
   {
     id: "2",
-    name: "Premium Business Laptop",
+    name: "Laptop Cao Cấp Doanh Nghiệp",
     price: 1899.99,
     image: laptop,
     rating: 4.6,
@@ -44,7 +44,7 @@ const mockProducts = [
   },
   {
     id: "3",
-    name: "Custom Build Components Kit",
+    name: "Bộ Linh Kiện Lắp Ráp",
     price: 1299.99,
     salePrice: 1199.99,
     image: components,
@@ -56,7 +56,7 @@ const mockProducts = [
   },
   {
     id: "4",
-    name: "Professional Workstation",
+    name: "Máy Trạm Chuyên Nghiệp",
     price: 3299.99,
     image: gamingPc,
     rating: 4.7,
@@ -67,7 +67,7 @@ const mockProducts = [
   },
   {
     id: "5",
-    name: "Budget Gaming Laptop",
+    name: "Laptop Gaming Giá Rẻ",
     price: 899.99,
     image: laptop,
     rating: 4.3,
@@ -78,7 +78,7 @@ const mockProducts = [
   },
   {
     id: "6",
-    name: "High-End Components Bundle",
+    name: "Combo Linh Kiện Cao Cấp",
     price: 1799.99,
     image: components,
     rating: 4.8,
@@ -155,24 +155,24 @@ export default function Products() {
       <main className="flex-1">
         <div className="max-w-7xl mx-auto px-4 py-8">
           <div className="mb-6">
-            <h1 className="text-3xl font-bold font-mono mb-2">All Products</h1>
+            <h1 className="text-3xl font-bold font-mono mb-2">Tất Cả Sản Phẩm</h1>
             <p className="text-muted-foreground">
-              {filteredProducts.length} products found
+              Tìm thấy {filteredProducts.length} sản phẩm
             </p>
           </div>
 
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-2">
-              <span className="text-sm text-muted-foreground">Sort by:</span>
+              <span className="text-sm text-muted-foreground">Sắp xếp:</span>
               <Select value={sortBy} onValueChange={setSortBy}>
                 <SelectTrigger className="w-40" data-testid="select-sort">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="best-match">Best Match</SelectItem>
-                  <SelectItem value="price-low">Price: Low to High</SelectItem>
-                  <SelectItem value="price-high">Price: High to Low</SelectItem>
-                  <SelectItem value="rating">Highest Rated</SelectItem>
+                  <SelectItem value="best-match">Phù Hợp Nhất</SelectItem>
+                  <SelectItem value="price-low">Giá: Thấp đến Cao</SelectItem>
+                  <SelectItem value="price-high">Giá: Cao đến Thấp</SelectItem>
+                  <SelectItem value="rating">Đánh Giá Cao Nhất</SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -197,9 +197,9 @@ export default function Products() {
             <div className="flex-1">
               {filteredProducts.length === 0 ? (
                 <div className="text-center py-16">
-                  <p className="text-lg font-semibold mb-2">No products found</p>
+                  <p className="text-lg font-semibold mb-2">Không tìm thấy sản phẩm</p>
                   <p className="text-muted-foreground mb-4">
-                    Try adjusting your filters
+                    Thử điều chỉnh bộ lọc của bạn
                   </p>
                   <Button
                     onClick={() => {
@@ -207,7 +207,7 @@ export default function Products() {
                       setSelectedBrands([]);
                     }}
                   >
-                    Clear Filters
+                    Xóa Bộ Lọc
                   </Button>
                 </div>
               ) : (

@@ -95,11 +95,11 @@ export function ProductCard({
 
           {stock > 0 ? (
             <Badge variant={stock < 10 ? "destructive" : "default"} className="text-xs" data-testid={`badge-stock-${id}`}>
-              {stock < 10 ? `Only ${stock} left` : "In Stock"}
+              {stock < 10 ? `Chỉ còn ${stock}` : "Còn Hàng"}
             </Badge>
           ) : (
             <Badge variant="secondary" className="text-xs" data-testid={`badge-out-stock-${id}`}>
-              Out of Stock
+              Hết Hàng
             </Badge>
           )}
         </div>
@@ -114,7 +114,7 @@ export function ProductCard({
           data-testid={`button-add-cart-${id}`}
         >
           <ShoppingCart className="h-4 w-4" />
-          Add to Cart
+          Thêm Vào Giỏ
         </Button>
       </div>
     </Card>

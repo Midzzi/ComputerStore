@@ -26,11 +26,11 @@ export function CategoryCard({ title, image, productCount, onClick }: CategoryCa
         </h3>
         {productCount && (
           <p className="text-sm text-muted-foreground" data-testid={`text-category-count-${title}`}>
-            {productCount} Products
+            {productCount} Sản Phẩm
           </p>
         )}
         <Button variant="outline" className="gap-2 group" data-testid={`button-shop-${title}`}>
-          Shop Now
+          Mua Ngay
           <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
         </Button>
       </div>

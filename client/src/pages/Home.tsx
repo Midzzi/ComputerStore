@@ -17,7 +17,7 @@ import components from "@assets/generated_images/Computer_components_collection_
 const mockProducts = [
   {
     id: "1",
-    name: "Gaming Desktop PC RTX 4090",
+    name: "PC Gaming RTX 4090",
     price: 2499.99,
     salePrice: 2299.99,
     image: gamingPc,
@@ -28,7 +28,7 @@ const mockProducts = [
   },
   {
     id: "2",
-    name: "Premium Business Laptop",
+    name: "Laptop Cao Cấp Doanh Nghiệp",
     price: 1899.99,
     image: laptop,
     rating: 4.6,
@@ -38,7 +38,7 @@ const mockProducts = [
   },
   {
     id: "3",
-    name: "Custom Build Components Kit",
+    name: "Bộ Linh Kiện Lắp Ráp",
     price: 1299.99,
     salePrice: 1199.99,
     image: components,
@@ -49,7 +49,7 @@ const mockProducts = [
   },
   {
     id: "4",
-    name: "Professional Workstation",
+    name: "Máy Trạm Chuyên Nghiệp",
     price: 3299.99,
     image: gamingPc,
     rating: 4.7,
@@ -115,23 +115,23 @@ export default function Home() {
 
         <section className="max-w-7xl mx-auto px-4 py-16">
           <h2 className="text-3xl font-bold text-center mb-12 font-mono">
-            Shop by Category
+            Danh Mục Sản Phẩm
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <CategoryCard
-              title="Gaming PCs"
+              title="PC Gaming"
               image={gamingPc}
               productCount={48}
               onClick={() => console.log("Navigate to Gaming PCs")}
             />
             <CategoryCard
-              title="Laptops"
+              title="Laptop"
               image={laptop}
               productCount={92}
               onClick={() => console.log("Navigate to Laptops")}
             />
             <CategoryCard
-              title="Components"
+              title="Linh Kiện"
               image={components}
               productCount={156}
               onClick={() => console.log("Navigate to Components")}
@@ -141,7 +141,7 @@ export default function Home() {
 
         <section className="max-w-7xl mx-auto px-4 py-16">
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold font-mono">Trending Products</h2>
+            <h2 className="text-3xl font-bold font-mono">Sản Phẩm Nổi Bật</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {mockProducts.map((product) => (
@@ -158,7 +158,7 @@ export default function Home() {
         <section className="bg-card py-16">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12 font-mono">
-              Why Choose TechStore
+              Tại Sao Chọn TechStore
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <Card className="p-6 text-center space-y-4">
@@ -167,9 +167,9 @@ export default function Home() {
                     <ShieldCheck className="h-8 w-8 text-primary" />
                   </div>
                 </div>
-                <h3 className="font-bold text-xl">2-Year Warranty</h3>
+                <h3 className="font-bold text-xl">Bảo Hành 2 Năm</h3>
                 <p className="text-muted-foreground">
-                  All products come with comprehensive warranty coverage
+                  Tất cả sản phẩm đều có chế độ bảo hành toàn diện
                 </p>
               </Card>
               <Card className="p-6 text-center space-y-4">
@@ -178,9 +178,9 @@ export default function Home() {
                     <Truck className="h-8 w-8 text-primary" />
                   </div>
                 </div>
-                <h3 className="font-bold text-xl">Free Shipping</h3>
+                <h3 className="font-bold text-xl">Miễn Phí Vận Chuyển</h3>
                 <p className="text-muted-foreground">
-                  Free shipping on all orders over $500
+                  Miễn phí vận chuyển cho đơn hàng trên $500
                 </p>
               </Card>
               <Card className="p-6 text-center space-y-4">
@@ -189,9 +189,9 @@ export default function Home() {
                     <Headphones className="h-8 w-8 text-primary" />
                   </div>
                 </div>
-                <h3 className="font-bold text-xl">24/7 Support</h3>
+                <h3 className="font-bold text-xl">Hỗ Trợ 24/7</h3>
                 <p className="text-muted-foreground">
-                  Expert support available around the clock
+                  Đội ngũ chuyên gia sẵn sàng hỗ trợ mọi lúc
                 </p>
               </Card>
             </div>

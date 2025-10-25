@@ -34,7 +34,7 @@ export function FilterSidebar({
   return (
     <Card className="p-4 space-y-6">
       <div className="flex items-center justify-between">
-        <h3 className="font-bold text-lg">Filters</h3>
+        <h3 className="font-bold text-lg">Bộ Lọc</h3>
         {(selectedBrands.length > 0 || priceRange[0] > 0 || priceRange[1] < maxPrice) && (
           <Button
             variant="ghost"
@@ -44,13 +44,13 @@ export function FilterSidebar({
             data-testid="button-clear-filters"
           >
             <X className="h-3 w-3" />
-            Clear
+            Xóa
           </Button>
         )}
       </div>
 
       <div className="space-y-3">
-        <Label className="text-sm font-semibold">Price Range</Label>
+        <Label className="text-sm font-semibold">Khoảng Giá</Label>
         <div className="space-y-4">
           <Slider
             value={priceRange}
@@ -68,7 +68,7 @@ export function FilterSidebar({
       </div>
 
       <div className="space-y-3">
-        <Label className="text-sm font-semibold">Brand</Label>
+        <Label className="text-sm font-semibold">Thương Hiệu</Label>
         <div className="space-y-2">
           {brands.map((brand) => (
             <div key={brand} className="flex items-center gap-2">

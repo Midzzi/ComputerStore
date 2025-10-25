@@ -44,7 +44,7 @@ export function CartDrawer({
         data-testid="drawer-cart"
       >
         <div className="flex items-center justify-between p-4 border-b">
-          <h2 className="text-lg font-bold">Shopping Cart</h2>
+          <h2 className="text-lg font-bold">Giỏ Hàng</h2>
           <Button variant="ghost" size="icon" onClick={onClose} data-testid="button-close-cart">
             <X className="h-5 w-5" />
           </Button>
@@ -55,8 +55,8 @@ export function CartDrawer({
             <div className="flex flex-col items-center justify-center h-full text-center space-y-4">
               <ShoppingBag className="h-16 w-16 text-muted-foreground" />
               <div className="space-y-2">
-                <p className="font-semibold" data-testid="text-empty-cart">Your cart is empty</p>
-                <p className="text-sm text-muted-foreground">Add some products to get started</p>
+                <p className="font-semibold" data-testid="text-empty-cart">Giỏ hàng trống</p>
+                <p className="text-sm text-muted-foreground">Thêm sản phẩm để bắt đầu</p>
               </div>
             </div>
           ) : (
@@ -122,13 +122,13 @@ export function CartDrawer({
         {items.length > 0 && (
           <div className="border-t p-4 space-y-4">
             <div className="flex items-center justify-between text-lg">
-              <span className="font-semibold">Subtotal:</span>
+              <span className="font-semibold">Tạm Tính:</span>
               <span className="font-bold font-mono" data-testid="text-subtotal">
                 ${subtotal.toFixed(2)}
               </span>
             </div>
             <Button className="w-full" size="lg" onClick={onCheckout} data-testid="button-checkout">
-              Checkout
+              Thanh Toán
             </Button>
           </div>
         )}
