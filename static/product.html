@@ -1,0 +1,37 @@
+<!-- static/product.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chi tiết sản phẩm</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html">Quay lại Trang chủ</a>
+    <div id="productDetail"></div>
+  </div>
+  <script src="scripts.js"></script>
+  <script>
+    // Lấy productId từ query string
+    function getProductId() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get("id");
+    }
+
+    const productId = getProductId();
+    const product = products.find(p => p.id === productId);
+
+    if(product){
+      document.getElementById("productDetail").innerHTML = `
+        <h2>${product.name}</h2>
+        <img src="${product.image}" alt="${product.name}" style="max-width:340px; border-radius:12px;">
+        <p>${product.description}</p>
+        <p class="price">${product.price}</p>
+      `;
+    } else {
+      document.getElementById("productDetail").textContent = "Không tìm thấy sản phẩm!";
+    }
+  </script>
+</body>
+</html>
